@@ -13,7 +13,7 @@ class SwitchSystem {
 
     // Definér metoden attachToHTML, som gør referencer til HTML elementer klar, opretter click-events, osv.
     attachToHTML(cssSelector) {
-
+        // denne parent bør skrives i 
         this.switchsystem = document.querySelector(cssSelector);
 
         this.buttonElement = this.switchsystem.querySelector("button");
