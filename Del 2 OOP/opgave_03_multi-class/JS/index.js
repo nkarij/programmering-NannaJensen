@@ -1,21 +1,26 @@
-person1 = new Person();
-// console.log(person2);
-person1.firstname = "Musse";
-person1.lastname = "Busse";
-person1.age = "28"
 
-// her kalder jeg getFullName, som er en function der logger fulde navn
-let introduction = person1.introduceSelf();
-// console.log(introduction);
+// -----------------------------------------------
 
-person2 = new Person();
-// console.log(person2);
-person2.firstname = "Mickey";
-person2.lastname = "Mouse";
-person2.age = "5"
+let institution1 = new Institution("RTS");
+let education2 = new Education("Tømrer");
+let schoolClass1 = new Schoolclass("Tømrer Klasse 1");
+let student1 = new Student("Bamse");
+let student2 = new Student("Kylling");
+// console.log(student2);
 
-person1.friend = person2;
-person2.friend = person1;
+student1.allocateToSchoolClass(schoolClass1);
+console.log(schoolClass1.students);
+schoolClass1.addStudents([student1, student2]);
+console.log(schoolClass1.students);
+schoolClass1.allocateToEducation(education2);
+console.log(education2.schoolclasses);
+education2.allocateToInstitution(institution1);
+console.log(institution1.educations);
+console.log(institution1);
 
-let greeting = person1.sayHiToPerson(person2);
-console.log(greeting);
+
+// education2.addSchoolClass(schoolClass1);
+// console.log(education2.schoolclasses);
+
+
+
