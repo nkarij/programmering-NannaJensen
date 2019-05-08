@@ -5,8 +5,7 @@ class SchoolClass {
         this.className = className;
         this.educationName = educationName;
         this.institutionName =  institutionName;
-        this.studentNamesArray = ["nanna", "mickey", "musse"];
-        this.newStudentNamesArray = "";
+        this.studentNamesArray = [];
         // this.showStudentsAsHTMLList();
     }
 
@@ -17,8 +16,7 @@ class SchoolClass {
     }
 
     addStudents(names) {
-        this.newStudentNamesArray = this.studentNamesArray.concat(names);
-        this.studentNamesArray = this.newStudentNamesArray;
+        this.studentNamesArray = this.studentNamesArray.concat(names);
         // console.log(this.studentNamesArray);
     }
 
