@@ -5,6 +5,10 @@ class Education {
         this.schoolclasses = [];
     }
 
+    // createEducation(name){
+    //     new Education(name);
+    // }
+
     allocateToInstitution(newinstitution){
         this.institution = newinstitution;
         newinstitution.educations.push(this);
@@ -14,5 +18,17 @@ class Education {
         let schoolClass = newschoolclass;
         this.schoolclasses.push(schoolClass);
         newschoolclass.education = this;
+    }
+
+    removeSchoolClass(schoolclass) {
+        this.schoolclasses.forEach(schoolc => {
+            if(schoolc == schoolclass) {
+                this.schoolclasses.splice(this.schoolclasses.indexOf(schoolc), 1);
+                return this.schoolclasses;
+            } else {
+                console.log("skoleklassen findes ikke");
+                return;
+            }
+        })
     }
 }

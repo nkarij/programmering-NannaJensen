@@ -19,4 +19,5 @@ class Schoolclass {
         let students = newstudents;
         this.students = students.concat(this.students);
     }
+
 }

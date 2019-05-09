@@ -6,7 +6,7 @@ class Student {
 
     allocateToSchoolClass(newschoolclass){
         this.schoolclass = newschoolclass;
-        newschoolclass.students = this;
+        newschoolclass.students.push(this);
     }
 
 }
