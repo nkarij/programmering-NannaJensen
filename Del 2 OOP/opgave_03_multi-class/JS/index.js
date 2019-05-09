@@ -45,10 +45,13 @@ let buttonAddEducation = document.querySelector(".add-education-to-institution")
 let buttonRemoveEducation = document.querySelector(".remove-education-from-institution");
 let buttonAddSchoolClass = document.querySelector(".add-schoolclass-to-education");
 let buttonRemoveSchoolClass = document.querySelector(".remove-schoolclass-from-education");
+let buttonWriteSchoolClassesToDom = document.querySelector(".write-all-schoolclasses-to-dom");
 // OBJECT-VARIABLER TIL AT SENDE MED
 let institutionObject = null;
 let educationObject = null;
 let schoolclassObject = null;
+
+
 
 // ADD INSTITUTION
 let institutionName1 = "KEA"
@@ -139,4 +142,14 @@ buttonRemoveSchoolClass.addEventListener('click', function(){
     });
 
 });
+
+// WRITE ALL SCHOOLCLASSES TO DOM
+// NB writeSchoolClasses modtager 2 parametre (index, cssselector)
+let indexOfEducation = 0;
+buttonWriteSchoolClassesToDom.addEventListener('click', function(){
+    institutionObject.writeSchoolClassesToDom(indexOfEducation, "#list-container");
+}) 
+
+
+
 

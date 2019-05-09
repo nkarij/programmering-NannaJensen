@@ -29,6 +29,38 @@ class Institution {
         document.querySelector(cssSelector).appendChild(listElement);
     }
 
+
+    writeSchoolClassesToDom(arrayindex, cssSelector){
+        if(this.educations.length == 0){
+            console.log("der er ingen skoleklasser i denne uddannelse");
+        } else {
+
+            
+            let listElement = document.createElement("ul");
+            listElement.innerHTML = "";
+            // jeg vil gerne loope alle educations
+            // og hvis this.educations.indexOf(education) = arrayindex
+            // så vil jeg gerne skrive alle uddannelsens schoolclasses til DOM
+            for (let index = 0; index < this.educations.length; index++) {
+                const education = this.educations[index];
+                console.log(education);
+                const educationIndex = this.educations.indexOf(education);
+                console.log(educationIndex);
+                if(educationIndex == arrayindex) {
+                    education.schoolclasses.forEach(schoolclass => {
+                        let listItem = document.createElement("li");
+                        listItem.innerHTML = schoolclass.name;
+                        listElement.appendChild(listItem);
+                    })
+                }
+            }  
+            
+            document.querySelector(cssSelector).appendChild(listElement);
+        }   
+    }
+
+
+
     writeAllStudentsToDOM(cssSelector) {
         // console.log(this.educations);
         

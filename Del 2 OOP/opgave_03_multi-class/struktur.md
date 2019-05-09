@@ -3,7 +3,7 @@
 <!-- udskriv alle educations -->
 <!-- udskriv alle students til DOM, vha createElement -->
 <!-- lav en function/method som fjerner 1 student -->
-<!-- lav en function/methos som retter 1 education -->
+<!-- lav en function/method som retter 1 education -->
 <!-- første education, udskriv alle schoolclasses -->
 
 Institution.js
